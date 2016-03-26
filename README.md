@@ -1,6 +1,6 @@
 # GQT - Go(lang) SQL Templates
 
-Package qgt is a template engine for SQL queries.
+Package gqt is a template engine for SQL queries.
 
 It helps to separate SQL code from Go code and permits to compose the queries
 with a simple syntax.
@@ -8,7 +8,7 @@ with a simple syntax.
 The template engine is the standard package "text/template".
 
 Why this package?
-Read more about [ORM is the Vietnam of computer sience](http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/).
+Read more about [ORM is the Vietnam of computer science](http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/).
 
 Install/update using go get (no dependencies required by gqt):
 
@@ -73,7 +73,7 @@ db.Query(gqt.Exec("allPosts", map[string]interface{
 }), date)
 ```
 
-The templates are parsed immediatly and recursively.
+The templates are parsed immediately and recursively.
 
 ## Namespaces
 
@@ -98,7 +98,7 @@ templates2/
 ```
 
 The blocks inside the sql files are merged, the blocks with the same namespace
-and name will be overidden following the alphabetical order.
+and name will be overridden following the alphabetical order.
 
 The sub-directories are used as namespaces and accessed like:
 

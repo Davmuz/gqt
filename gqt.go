@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 /*
-Package qgt is a template engine for SQL queries.
+Package gqt is a template engine for SQL queries.
 
 It helps to separate SQL code from Go code and permits to compose the queries
 with a simple syntax.
@@ -50,7 +50,7 @@ queries:
 		"Order": "DESC",
 	}), date)
 
-The templates are parsed immediatly and recursively.
+The templates are parsed immediately and recursively.
 
 Namespaces
 
@@ -73,7 +73,7 @@ directories.
 	|-- queries.sql
 
 The blocks inside the sql files are merged, the blocks with the same namespace
-and name will be overidden following the alphabetical order.
+and name will be overridden following the alphabetical order.
 
 The sub-directories are used as namespaces and accessed like:
 
@@ -127,7 +127,7 @@ func NewRepository() *Repository {
 }
 
 // Add adds a root directory to the repository, recursively. Match only the
-// given file extension. Blocks on the same namespace will be overidden. Does
+// given file extension. Blocks on the same namespace will be overridden. Does
 // not follow symbolic links.
 func (r *Repository) Add(root string, pattern string) (err error) {
 	// List the directories
@@ -184,7 +184,7 @@ func (r *Repository) Get(name string) string {
 	return r.Exec(name, nil)
 }
 
-// Exec is a shortcut for r.Parse(), but panics if an error occour.
+// Exec is a shortcut for r.Parse(), but panics if an error occur.
 func (r *Repository) Exec(name string, data interface{}) (s string) {
 	var err error
 	s, err = Parse(name, data)
