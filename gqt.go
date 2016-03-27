@@ -163,19 +163,14 @@ func (r *Repository) Add(root string, pattern string) (err error) {
 }
 
 // addDir parses a directory.
-func (r *Repository) addDir(path, namespace, pattern string) (err error) {
-	// Create the template if necessary
-	if _, ok := r.templates[namespace]; ok == false {
-		r.templates[namespace] = template.New("")
-	}
-
+func (r *Repository) addDir(path, namespace, pattern string) error {
 	// Parse the template
-	t := r.templates[namespace]
-	t, err = t.ParseGlob(filepath.Join(path, pattern))
-	r.templates[namespace] = t
+	t, err := t.ParseGlob(filepath.Join(path, pattern))
 	if err != nil {
+		r.templates[namespace] = template.New("")
 		return err
 	}
+	r.templates[namespace] = t
 	return nil
 }
 
