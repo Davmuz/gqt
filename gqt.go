@@ -187,7 +187,7 @@ func (r *Repository) Get(name string) string {
 // Exec is a shortcut for r.Parse(), but panics if an error occur.
 func (r *Repository) Exec(name string, data interface{}) (s string) {
 	var err error
-	s, err = Parse(name, data)
+	s, err = r.Parse(name, data)
 	if err != nil {
 		panic(err)
 	}
