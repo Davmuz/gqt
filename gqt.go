@@ -114,12 +114,12 @@ import (
 	"text/template"
 )
 
-// SQL template repository.
+// Repository stores SQL templates.
 type Repository struct {
 	templates map[string]*template.Template // namespace: template
 }
 
-// Constructor.
+// NewRepository creates a new Repository.
 func NewRepository() *Repository {
 	return &Repository{
 		templates: make(map[string]*template.Template),
