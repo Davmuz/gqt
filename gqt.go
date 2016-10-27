@@ -165,7 +165,7 @@ func (r *Repository) Add(root string, pattern string) (err error) {
 // addDir parses a directory.
 func (r *Repository) addDir(path, namespace, pattern string) error {
 	// Parse the template
-	t, err := t.ParseGlob(filepath.Join(path, pattern))
+	t, err := template.ParseGlob(filepath.Join(path, pattern))
 	if err != nil {
 		r.templates[namespace] = template.New("")
 		return err
