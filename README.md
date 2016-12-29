@@ -1,6 +1,6 @@
 # GQT - Go(lang) SQL Templates
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/Davmuz/gqt)](https://goreportcard.com/report/github.com/Davmuz/gqt)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Davmuz/gqt)](https://goreportcard.com/report/github.com/Davmuz/gqt) [![GoDoc](https://godoc.org/github.com/Davmuz/gqt?status.svg)](https://godoc.org/github.com/Davmuz/gqt)
 
 Package gqt is a template engine for SQL queries.
 
