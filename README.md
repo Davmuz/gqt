@@ -70,7 +70,7 @@ db.Query(gqt.Get("allUsers"))
 // Query with parameters
 db.QueryRow(gqt.Get("getuser"), 1)
 // Query with context and parameters
-db.Query(gqt.Exec("allPosts", map[string]interface{
+db.Query(gqt.Exec("allPosts", map[string]interface{}{
 	"Order": "DESC",
 }), date)
 ```
